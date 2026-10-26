@@ -1827,7 +1827,7 @@ function saveCliente(){
 			} else {
 				// rinomina la cartella
 						$.ajax({
-							url: 'src/rinomina_cartella.php', // Il tuo script server
+							url: '../save&delete_customers/rename_customer_folder.php', // Il tuo script server
 							type: 'POST',
 							dataType: 'json',
 							data: {
@@ -2371,7 +2371,7 @@ function controlla_stato_pratica(){
 		$('#esportazione').on('submit', function(event) {
         event.preventDefault(); 
 				$.ajax({
-					url: 'salva_cliente.php', // Lo script DB
+					url: '../save&delete_customers/salva_cliente.php', // Lo script DB
 					type: 'POST',
 					data: $("#esportazione").serialize(), // 
 					success: function(response) {
@@ -2428,7 +2428,7 @@ function controlla_stato_pratica(){
         event_.preventDefault(); 
 
 				$.ajax({
-					url: 'salva_cliente.php', // Lo script DB
+					url: '../save&delete_customers/salva_cliente.php', // Lo script DB
 					type: 'POST',
 					data: $("#esportazione").serialize(), // 
 					success: function(response) {
@@ -2461,7 +2461,7 @@ function controlla_stato_pratica(){
 			   //console.log("clienti filtrati old:"+clienti_filtrati.length);
 			   		set_clienti_loaded = [];                
                     $.ajax({
-                    url: 'load_data.php', 
+                    url: 'save&delete_customers/load_data.php', 
                     type: 'GET',        
                     dataType: 'json',   
                     success: function(response) {
@@ -2773,7 +2773,7 @@ function rimuovi_riga_mail_selector(el){
 
 		
 				$.ajax({
-					url: 'crea_pdf.php', // Lo script DB
+					url: 'generate_pdf_view/crea_pdf.php', // Lo script DB
 					type: 'POST',
 					data: $("#esportazione").serialize(), // 
 					success: function(response) {
@@ -2932,7 +2932,7 @@ function eliminaCliente (){
     }
 
     $.ajax({
-        url:  'delete_form.php',
+        url:  '../save&delete_customers/delete_form.php',
         type: 'POST',
         data: { action: 'delete_cliente', id: id },
         dataType: 'json',
