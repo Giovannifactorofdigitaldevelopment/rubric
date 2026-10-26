@@ -3075,7 +3075,7 @@ async function controlla_file_su_server_js(urlFile) {
 	function recupera_lista_file(id_rubrica,carte){
 		grigione=[];
 								$.ajax({
-							url: 'src/lista_file_folder.php',
+							url: '../save&delete_customers/directory_folder_setting.php',
 							type: 'POST',
 							dataType: 'json',
 							data: {
