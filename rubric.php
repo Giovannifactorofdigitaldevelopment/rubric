@@ -1827,7 +1827,7 @@ function saveCliente(){
 			} else {
 				// rinomina la cartella
 						$.ajax({
-							url: '../save&delete_customers/rename_customer_folder.php', // Il tuo script server
+							url: 'save&delete_customers/rename_customer_folder.php', // Il tuo script server
 							type: 'POST',
 							dataType: 'json',
 							data: {
@@ -2371,7 +2371,7 @@ function controlla_stato_pratica(){
 		$('#esportazione').on('submit', function(event) {
         event.preventDefault(); 
 				$.ajax({
-					url: '../save&delete_customers/salva_cliente.php', // Lo script DB
+					url: 'save&delete_customers/salva_cliente.php', // Lo script DB
 					type: 'POST',
 					data: $("#esportazione").serialize(), // 
 					success: function(response) {
@@ -2428,7 +2428,7 @@ function controlla_stato_pratica(){
         event_.preventDefault(); 
 
 				$.ajax({
-					url: '../save&delete_customers/salva_cliente.php', // Lo script DB
+					url: 'save&delete_customers/salva_cliente.php', // Lo script DB
 					type: 'POST',
 					data: $("#esportazione").serialize(), // 
 					success: function(response) {
@@ -2932,7 +2932,7 @@ function eliminaCliente (){
     }
 
     $.ajax({
-        url:  '../save&delete_customers/delete_form.php',
+        url:  'save&delete_customers/delete_form.php',
         type: 'POST',
         data: { action: 'delete_cliente', id: id },
         dataType: 'json',
@@ -3075,7 +3075,7 @@ async function controlla_file_su_server_js(urlFile) {
 	function recupera_lista_file(id_rubrica,carte){
 		grigione=[];
 								$.ajax({
-							url: '../save&delete_customers/directory_folder_setting.php',
+							url: 'save&delete_customers/directory_folder_setting.php',
 							type: 'POST',
 							dataType: 'json',
 							data: {
